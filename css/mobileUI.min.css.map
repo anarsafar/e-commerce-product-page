@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,EAAE,SAAS,EAAE,MAAM,EACvB,AAKQ,MALF,CACJ,YAAY,CACV,EAAE,CAEA,EAAE,CACA,CAAC,AAAA,CACC,OAAO,CAAE,SAAS,CACnB",
+    "sources": [
+        "../sass/mobileUI.scss"
+    ],
+    "names": [],
+    "file": "mobileUI.min.css"
+}
