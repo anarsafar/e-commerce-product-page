@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce product page</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="flex-vertical">
+        <div class="left-header flex-vertical">
+          <button type="button" class="hamburger-menu" id="menu-btn">
+            <div class="top-line"></div>
+            <div class="middle-line"></div>
+            <div class="bottom-line"></div>
+          </button>
+          <div class="logo"><a href="./index.html">sneakers</a></div>
+          <nav>
+            <div class="link-container">
+              <ul class="flex-vertical">
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Woman</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="right-header flex-vertical">
+          <div class="card">
+            <span class="card-count hide"></span>
+            <img src="./images/icon-cart.svg" alt="card" />
+          </div>
+          <div class="card-info hide" id="card-info">
+            <h6>Card</h6>
+            <p class="empty-msg">Your card is empty.</p>
+            <div class="checkout">
+              <!-- Shopping item will add here -->
+            </div>
+            <div class="checkout-btn-div">
+              <button class="checkout-btn btn hide">Checkout</button>
+            </div>
+          </div>
+          <div class="user">
+            <img src="./images/image-avatar.png" alt="user avatar" />
+          </div>
+        </div>
+      </header>
+      <section class="product flex-vertical">
+        <div class="product-container hide-mobile">
+          <div class="main-product open-modal">
+            <img src="./images/image-product-1.jpg" alt="" class="main-img" />
+          </div>
+          <div class="product-thumbnails flex-vertical">
+            <div class="product-item active-img-div">
+              <img
+                class="active-img"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-item">
+              <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+            </div>
+            <div class="product-item">
+              <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+            </div>
+            <div class="product-item">
+              <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- Modal  start-->
+        <div class="my-modal">
+          <div class="product-container modal-container">
+            <div class="close-btn flex-vertical">
+              <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                  fill="#fff"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="main-product">
+              <div class="previus-product flex-vertical">
+                <img src="./images/icon-previous.svg" alt="" />
+              </div>
+              <div class="next-product flex-vertical">
+                <img src="./images/icon-next.svg" alt="" />
+              </div>
+              <img
+                src="./images/image-product-1.jpg"
+                alt=""
+                class="main-img-second"
+              />
+            </div>
+            <div class="product-thumbnails flex-vertical">
+              <div class="product-item active-img-div">
+                <img
+                  class="active-img"
+                  src="./images/image-product-1-thumbnail.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="product-item">
+                <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+              </div>
+              <div class="product-item">
+                <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+              </div>
+              <div class="product-item">
+                <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal end -->
+        <div class="product-content">
+          <h5>Sneaker Company</h5>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price">
+            <div class="price-now flex-vertical">
+              <span class="actual-price">$125.00</span>
+              <span class="badge">50%</span>
+            </div>
+            <div class="price-before">$250.00</div>
+          </div>
+          <form class="flex-vertical">
+            <div class="product-count flex-vertical">
+              <span class="minus"
+                ><img src="./images/icon-minus.svg" alt=""
+              /></span>
+              <span class="count">0</span>
+              <span class="plus"
+                ><img src="./images/icon-plus.svg" alt=""
+              /></span>
+            </div>
+            <button class="flex-vertical btn" id="add-to-cart">
+              <span class="card-white"
+                ><img src="./images/card-white.svg" alt=""
+              /></span>
+              <span>Add to card</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+.my-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  &.open {
+    display: block;
+  }
+  .modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .close-btn {
+      width: 100%;
+      padding: 10px 0;
+      justify-content: flex-end;
+      svg {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        &:hover {
+          path {
+            fill: $orange;
+          }
+        }
+      }
+    }
+    .main-product {
+      position: relative;
+      img {
+        cursor: auto;
+      }
+      .previus-product,
+      .next-product {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        border-radius: 50%;
+        cursor: pointer;
+        img {
+          width: 12px;
+          height: 12px;
+          cursor: pointer;
+          user-select: none;
+        }
+      }
+      .previus-product {
+        left: -20px;
+      }
+      .next-product {
+        right: -20px;
+      }
+      img {
+        height: 400px;
+        width: 400px;
+      }
+    }
+    .product-thumbnails {
+      justify-content: center;
+      div {
+        background: $white;
+        margin: 0 8px;
+        border: 2px solid rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .my-modal {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    margin-top: 1rem;
+    .modal-container {
+      position: static;
+      transform: translate(0, 0);
+      .main-product {
+        img {
+          object-fit: cover;
+        }
+        .previus-product {
+          left: 20px;
+        }
+        .next-product {
+          right: 20px;
+        }
+      }
+      .product-thumbnails {
+        display: none;
+      }
+      .close-btn {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .my-modal {
+    margin-top: 0;
+    .modal-container {
+      .main-product {
+        img {
+          width: 100vw;
+          height: 300px;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}

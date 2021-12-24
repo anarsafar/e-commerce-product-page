@@ -1,0 +1,230 @@
+.product {
+  margin-top: 2rem;
+  justify-content: space-around !important;
+
+  img {
+    border-radius: 1rem;
+  }
+
+  .product-container {
+    .main-product {
+      margin-bottom: 1.5rem;
+      img {
+        height: 350px;
+        width: 350px;
+        cursor: pointer;
+      }
+    }
+
+    .product-thumbnails {
+      .active-img {
+        opacity: 30%;
+      }
+
+      .active-img-div {
+        border: 2px solid $orange;
+        opacity: 1 !important;
+      }
+
+      div {
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 1.1rem;
+        img {
+          transition: all 0.4s;
+          &:hover {
+            opacity: 30%;
+          }
+        }
+      }
+    }
+  }
+
+  .product-content {
+    width: 400px;
+
+    h5 {
+      text-transform: uppercase;
+      color: $orange;
+      letter-spacing: 2px;
+      font-size: 13px;
+      margin: 0 0 10px;
+      padding: 0;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin: 0 0 1rem;
+    }
+
+    p {
+      color: $dark-grayish-blue;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .price-now {
+      justify-content: flex-start;
+
+      .actual-price {
+        font-weight: 700;
+        font-size: 2rem;
+      }
+
+      .badge {
+        background: $pale-orange;
+        color: $orange;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: 700;
+        margin-left: 10px;
+      }
+    }
+
+    .price-before {
+      color: $grayish-blue;
+      font-weight: 700;
+      text-decoration: line-through;
+      margin-top: 8px;
+    }
+
+    form {
+      justify-content: space-between;
+      margin-top: 1rem;
+
+      .product-count {
+        background: $light-grayish-blue;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 40%;
+
+        .minus,
+        .plus {
+          cursor: pointer;
+          transition: all 0.5s;
+          user-select: none;
+
+          &:hover {
+            filter: brightness(130%);
+          }
+        }
+
+        .minus {
+          img {
+            margin-bottom: 3px;
+          }
+        }
+
+        .count {
+          font-weight: 700;
+        }
+      }
+
+      .btn {
+        font-family: inherit;
+        font-weight: 700;
+        padding: 12px 0;
+        width: 55%;
+        box-shadow: 0px 0px 23px 10px $pale-orange;
+        border: none;
+        background: $orange;
+        color: $white;
+        border-radius: 7px;
+        cursor: pointer;
+        justify-content: center;
+        transition: all 0.5s;
+
+        &:hover {
+          filter: brightness(130%);
+        }
+
+        .card-white {
+          display: block;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .product {
+    .product-container {
+      .main-product {
+        img {
+          width: 300px;
+          height: 300px;
+        }
+      }
+      .product-thumbnails {
+        div {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .product {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    .hide-mobile {
+      display: none;
+    }
+    .product-container {
+      .main-product {
+        margin: auto;
+      }}
+    .product-content {
+      width: 375px;
+      padding: 1rem 1.5rem;
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      .price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0;
+        .price-now {
+          .actual-price {
+            font-size: 1.7rem;
+          }
+        }
+        .price-before {
+          margin: 0;
+        }
+      }
+      form {
+        flex-direction: column;
+        .product-count {
+          width: 100%;
+        }
+        .btn {
+          margin-top: 1rem;
+          width: 100%;
+          padding: 14px 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .product {
+    .product-content {
+      width: auto;
+    }
+  }
+}
